@@ -4,27 +4,26 @@
 <head>
   <meta charset="utf-8">
 
-  
+    
 
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Github绑定域名+百度统计尝试 | Rockie.胡言乱语</title>
+  <title>Github绑定域名+百度统计 | Rockie.胡言乱语</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="Github绑定域名+百度统计尝试">
+  <meta name="description" content="本文主要用来更新，近日将hexo github绑定个性域名并设置百度统计以及百度搜索的一些尝试操作。没什么计算机基础，所以只能不断试错。如果最终成功实现被百度收录，那你或许就能看到这篇文章了（笑+动力up">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Github绑定域名+百度统计">
 <meta property="og:url" content="http://yoursite.com/2020/03/26/Github%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D-%E7%99%BE%E5%BA%A6%E7%BB%9F%E8%AE%A1%E5%B0%9D%E8%AF%95/index.html">
 <meta property="og:site_name" content="Rockie.胡言乱语">
+<meta property="og:description" content="本文主要用来更新，近日将hexo github绑定个性域名并设置百度统计以及百度搜索的一些尝试操作。没什么计算机基础，所以只能不断试错。如果最终成功实现被百度收录，那你或许就能看到这篇文章了（笑+动力up">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-03-26T03:05:55.000Z">
-<meta property="article:modified_time" content="2020-03-26T03:05:56.001Z">
+<meta property="article:modified_time" content="2020-03-26T07:16:33.325Z">
 <meta property="article:author" content=" 三歪">
-<meta property="article:tag" content="html">
-<meta property="article:tag" content="css">
-<meta property="article:tag" content="js">
-<meta property="article:tag" content="Geek">
-<meta property="article:tag" content="Designer">
-<meta property="article:tag" content="ChocolateLover">
+<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="博客优化">
+<meta property="article:tag" content="百度统计">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Rockie.胡言乱语" type="application/atom+xml">
@@ -41,17 +40,17 @@
   </style>
   
 
-  
-	<script>
-	var _hmt = _hmt || [];
-	(function() {
-		var hm = document.createElement("script");
-		hm.src = "https://hm.baidu.com/hm.js?a419410b28fe29d91bcecbfc02bfcfcb";
-		var s = document.getElementsByTagName("script")[0]; 
-		s.parentNode.insertBefore(hm, s);
-	})();
-	</script>
-	
+
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?a419410b28fe29d91bcecbfc02bfcfcb";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+
 <meta name="generator" content="Hexo 4.2.0"></head>
 
 <body>
@@ -195,7 +194,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Github绑定域名+百度统计尝试
+      Github绑定域名+百度统计
     </h1>
   
 
@@ -208,7 +207,40 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>本文主要用来更新，近日将hexo github绑定<strong>个性域名</strong>并设置<strong>百度统计</strong>以及<strong>百度搜索</strong>的一些尝试操作。<br>没什么计算机基础，所以只能不断试错。如果最终成功实现被百度收录，那你或许就能看到这篇文章了（笑+动力up</p>
+<a id="more"></a>
+<p>先前尝试了很多方法想加访客量： 1.用了不蒜子的代码, 但显示数量高达10多万 2. 用了免费计数网站（也就是php生成图片的那种）但都显示500 error.<br>最终打算用百度统计，毕竟用了百度站长后，后续还能做更多操作。</p>
+<hr>
+<h2 id="域名绑定"><a href="#域名绑定" class="headerlink" title="域名绑定"></a>域名绑定</h2><p>准备好：购买好的个性域名（阿里云腾讯云都有域名购买），github page</p>
+<p>学习自 <a href="https://segmentfault.com/a/1190000011203711" target="_blank" rel="noopener">https://segmentfault.com/a/1190000011203711</a><br>这个博主写得十分详细了。主要分两步：</p>
+<ol>
+<li>域名解析配置</li>
+<li>github添加cname文件</li>
+</ol>
+<p>不赘述，我主要说一下我的问题：我还以为设置解析后马上就能访问hhhh，不知道实名认证是否有影响，但我认证后（就是上传身份证），差不多过了一个小时就解析成功可以访问啦。</p>
+<h3 id="如何查看域名是否生效"><a href="#如何查看域名是否生效" class="headerlink" title="如何查看域名是否生效"></a>如何查看域名是否生效</h3><p>在终端输入 <code>ping 域名地址</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">sh-3.2# ping www.rockienote.online</span><br><span class="line">PING rockienote.online (220.250.64.225): 56 data bytes</span><br><span class="line">Request timeout for icmp_seq 0</span><br><span class="line">Request timeout for icmp_seq 1</span><br><span class="line">Request timeout for icmp_seq 2</span><br><span class="line">Request timeout for icmp_seq 3</span><br><span class="line">^C &#x2F;&#x2F; timeout 就是没生效 输入control+c 停止命令</span><br><span class="line"></span><br><span class="line">--- rockienote.online ping statistics ---</span><br><span class="line">5 packets transmitted, 0 packets received, 100.0% packet loss</span><br><span class="line">sh-3.2# ping www.rockieyu.space</span><br><span class="line">PING jj1wy0adv3kb.dnswa.com (139.162.126.124): 56 data bytes</span><br><span class="line">64 bytes from 139.162.126.124: icmp_seq&#x3D;0 ttl&#x3D;52 time&#x3D;110.393 ms</span><br><span class="line">64 bytes from 139.162.126.124: icmp_seq&#x3D;1 ttl&#x3D;52 time&#x3D;118.379 ms</span><br><span class="line">&#x2F;&#x2F; 有ip地址啦 这样就生效啦</span><br></pre></td></tr></table></figure>
+<h3 id="每次hexo-d后404问题"><a href="#每次hexo-d后404问题" class="headerlink" title="每次hexo d后404问题"></a>每次hexo d后404问题</h3><p>之后突然发现每次hexo clean/hexo g/hexo d 后…. 之前设置的cname文件都会被clean掉。</p>
+<p>解决方法：<br>在source目录下创建CNAME文件，在mac终端操作如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;先看看现在的工作路径</span><br><span class="line">sh-3.2# pwd</span><br><span class="line">&#x2F;Users&#x2F;rockie&#x2F;blog</span><br><span class="line">&#x2F;&#x2F;进入source目录</span><br><span class="line">sh-3.2# cd source</span><br><span class="line">&#x2F;&#x2F; 创建cname文件</span><br><span class="line">sh-3.2# touch CNAME</span><br><span class="line">&#x2F;&#x2F; 进入cname文件编辑</span><br><span class="line">sh-3.2# vim CNAME</span><br><span class="line">（按esc后按i，进入编辑模式，输入你的域名，无需www前缀。比如我的就是rockienote.online</span><br><span class="line">完成后 按esc,再按:再按wq！保存退出。)</span><br><span class="line">当时搜这些键搜我半天 但其实也可以直接用vscode编辑的哈。</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="加入百度统计"><a href="#加入百度统计" class="headerlink" title="加入百度统计"></a>加入百度统计</h2><p>主要分为三步：1.登陆/注册百度统计 2.获取代码复制 3.检查</p>
+<p>step1:<br>我输入github的域名没反应…<br>这就是为什么我又买了个域名的缘故… 我以为它不认github (不排除我理解和操作有错)<br>不管怎样！注册完成后马上就可以收获代码。</p>
+<p>step2:<br>无脑复制。其实百度统计的帮助文档很清晰，<br>最简便的方法就是直接找到你的主题的head.ejs文件，然后在</head>前。<br>将百度给你的代码复制上，</p>
+<p>不过很多主题其实有更新配备这些子功能，以yilia为例，<br>只需在yilia的config文档里。找到 baidu_analytics （跟 google_analytics在一起的）<br>并输入自己的id,id就是百度代码里<code>https://hm.baidu.com/hm.js?xxxxxxx</code>的x部分 </p>
+<p>step3:<br>检查是否安装上了，这里其实百度统计说得很详细了。<br><a href="https://tongji.baidu.com/web/help/article?id=93&amp;type=0" target="_blank" rel="noopener">https://tongji.baidu.com/web/help/article?id=93&amp;type=0</a></p>
+<p>遇到的主要问题：</p>
+<ol>
+<li>检查的时候发现404了。已解决，如上</li>
+<li>百度检查表示出错，但我手动检查无误，原来是检查范围输错网址…</li>
+</ol>
+<p>然后就在基础报告里可以看啦，DONE!!! AWESOME!!! </p>
+<hr>
+<h2 id="百度搜索尝试，上篇"><a href="#百度搜索尝试，上篇" class="headerlink" title="百度搜索尝试，上篇"></a>百度搜索尝试，上篇</h2><image src='/images/baidusearch.jpg' >
+
+<p>多方查询后在yilia主题的讨论中看到这个<br>…感觉愈发艰难了，不过我还是会进行尝试的</p>
+
       
 
       
@@ -216,6 +248,25 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">博客优化</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">百度统计</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -301,6 +352,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#域名绑定"><span class="toc-number">1.</span> <span class="toc-text">域名绑定</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#如何查看域名是否生效"><span class="toc-number">1.1.</span> <span class="toc-text">如何查看域名是否生效</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#每次hexo-d后404问题"><span class="toc-number">1.2.</span> <span class="toc-text">每次hexo d后404问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#加入百度统计"><span class="toc-number">2.</span> <span class="toc-text">加入百度统计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#百度搜索尝试，上篇"><span class="toc-number">3.</span> <span class="toc-text">百度搜索尝试，上篇</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
@@ -415,15 +479,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">博客优化</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">百度统计</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">adobe illustrator</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Javascript</a>
+                <a href="javascript:void(0)" class="js-tag color3">文字</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">文字</a>
+                <a href="javascript:void(0)" class="js-tag color1">Javascript</a>
               </li>
             
             <div class="clearfix"></div>
