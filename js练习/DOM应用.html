@@ -9,20 +9,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>搭建博客的曲折过程 | Rockie.胡言乱语</title>
+  <title>Rockie.胡言乱语</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="最近杂食了许多知识，小程序, php, js… 但没有系统地去整理知识。耗时大半天，依据教程搭建了blog，终于有一个在线笔记库啦，兴奋hhh生命不息，折腾不止。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="搭建博客的曲折过程">
-<meta property="og:url" content="http://yoursite.com/2020/03/23/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%9B%B2%E6%8A%98%E8%BF%87%E7%A8%8B/index.html">
+  <meta name="description" content="DOM">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Rockie.胡言乱语">
+<meta property="og:url" content="http://yoursite.com/js%E7%BB%83%E4%B9%A0/DOM%E5%BA%94%E7%94%A8.html">
 <meta property="og:site_name" content="Rockie.胡言乱语">
-<meta property="og:description" content="最近杂食了许多知识，小程序, php, js… 但没有系统地去整理知识。耗时大半天，依据教程搭建了blog，终于有一个在线笔记库啦，兴奋hhh生命不息，折腾不止。">
+<meta property="og:description" content="DOM">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-03-23T13:33:59.000Z">
-<meta property="article:modified_time" content="2020-03-26T08:38:26.399Z">
+<meta property="article:published_time" content="2020-03-28T09:05:19.024Z">
+<meta property="article:modified_time" content="2020-03-28T07:30:12.514Z">
 <meta property="article:author" content=" 三歪">
-<meta property="article:tag" content="hexo">
-<meta property="article:tag" content="博客优化">
+<meta property="article:tag" content="html">
+<meta property="article:tag" content="css">
+<meta property="article:tag" content="js">
+<meta property="article:tag" content="Geek">
+<meta property="article:tag" content="Designer">
+<meta property="article:tag" content="ChocolateLover">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Rockie.胡言乱语" type="application/atom+xml">
@@ -186,55 +190,22 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-搭建博客的曲折过程" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      搭建博客的曲折过程
-    </h1>
-  
-
-        
-        <a href="/2020/03/23/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%9B%B2%E6%8A%98%E8%BF%87%E7%A8%8B/" class="archive-article-date">
-  	<time datetime="2020-03-23T13:33:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-23</time>
-</a>
-        
-      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>最近杂食了许多知识，小程序, php, js… 但没有系统地去整理知识。<br>耗时大半天，依据教程搭建了blog，终于有一个在线笔记库啦，兴奋hhh<br>生命不息，折腾不止。</p>
-<a id="more"></a>
-
-<h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><p>包括：node.js github注册</p>
-<p>node.js下载安装，因为hexo基于node生成</p>
-<p>打开terminal，以下都靠命令行</p>
-<p><code>sudo su</code>切换至root用户<br><code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code><br>淘宝镜像源 更快一些</p>
-<hr>
-<h2 id="安装hexo博客框架"><a href="#安装hexo博客框架" class="headerlink" title="安装hexo博客框架"></a>安装hexo博客框架</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cnpm install -g hexo-cli &#x2F;&#x2F;全局安装hexo</span><br><span class="line">mkdir blog &#x2F;&#x2F;当前路径下创建新目录blog</span><br><span class="line">cd blog &#x2F;&#x2F;进入blog目录</span><br><span class="line">pwd  &#x2F;&#x2F;查看当前路径</span><br><span class="line">sudo hexo init  &#x2F;&#x2F;初始化hexo</span><br><span class="line">hexo s  &#x2F;&#x2F;hexo strat&#x2F;server  http:&#x2F;&#x2F;localhost:4000</span><br></pre></td></tr></table></figure>
-
-<p>第二次遇到的error：端口被占用，<br>解决方法 hexo server -p 5000 换个端口（但每次明明hexo s 就能做到的事情都得打这么一长串）<br>另一个更方便的就是查看端口被谁占了，永绝后患<br>Mac 终端命令行操作方式：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sh-3.2# lsof -i tcp:4000</span><br><span class="line">COMMAND  PID USER   FD   TYPE             DEVICE SIZE&#x2F;OFF NODE NAME</span><br><span class="line">node    6762 root   33u  IPv6 0x894456a7e58b8313      0t0  TCP *:terabase (LISTEN)</span><br><span class="line">&#x2F;&#x2F; 发现6762占用端口啦，把它给毙了</span><br><span class="line">sh-3.2# kill 6762</span><br><span class="line">&#x2F;&#x2F; 再次查看，发现没有占用4000端口的pid啦</span><br><span class="line">sh-3.2# lsof -i tcp:4000</span><br><span class="line">sh-3.2#</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="创建博文"><a href="#创建博文" class="headerlink" title="创建博文"></a>创建博文</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo n &quot;搭建博客的过程（跟敲代码）&quot;.  (这里的引号得是英文）</span><br><span class="line">cd sources&#x2F;_posts&#x2F; &#x2F;&#x2F;进入创建md文件的路径</span><br><span class="line">vim 搭建博客的过程（跟敲代码）.md &#x2F;&#x2F;进入md文件开始写</span><br></pre></td></tr></table></figure>
-
-<p>回到blog目录 cd ../..<br>清理 - 生成 - server 三连一下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean </span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="部署到github"><a href="#部署到github" class="headerlink" title="部署到github"></a>部署到github</h2><p>在github上新建一个和自己用户名一样的repo<br>用户名别起英文大写，有error不好解决</p>
-<p>在blog目录下安装一个插件<br><code>cnpm install --save hexo-deployer-git</code></p>
-<p>编辑config文件 注意引号后有空格</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vim _config.yml</span><br><span class="line">type: git</span><br><span class="line">repo: https:&#x2F;&#x2F;github.com&#x2F;username&#x2F;username.github.io.git</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="下载更换主题（pwd为blog）"><a href="#下载更换主题（pwd为blog）" class="headerlink" title="下载更换主题（pwd为blog）"></a>下载更换主题（pwd为blog）</h2><p><code>git clone http://相应的git网站.git themes/xxx（clone到themes下的相应名称的文件夹）</code><br>更换config.yml中theme</p>
-<hr>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>b站教程<br><a href="https://www.bilibili.com/video/BV1Yb411a7ty?t=1435" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1Yb411a7ty?t=1435</a></p>
-<p>vim相关命令<br><a href="https://www.jianshu.com/p/4ca90dc36c77" target="_blank" rel="noopener">https://www.jianshu.com/p/4ca90dc36c77</a> </p>
+        
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+    
+</body>
+</html>
 
       
 
@@ -243,21 +214,6 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">博客优化</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -308,7 +264,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/03/23/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%9B%B2%E6%8A%98%E8%BF%87%E7%A8%8B/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/js%E7%BB%83%E4%B9%A0/DOM%E5%BA%94%E7%94%A8.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -320,20 +276,6 @@
 </article>
 
   
-<nav id="article-nav">
-  
-    <a href="/2020/03/23/Javascript%E6%B8%A9%E6%95%85%E7%9F%A5%E6%96%B0%E7%AC%94%E8%AE%B0/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Javascript温故知新笔记
-        
-      </div>
-    </a>
-  
-  
-</nav>
-
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -391,7 +333,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
