@@ -11,21 +11,19 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Rockie.胡言乱语</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Document       .time{         width: 20px;     }        window.onload &#x3D; function (){      var imgs &#x3D; document.getElementsByClassName(&#39;time&#39;)           &#x2F;&#x2F; var str &#x3D; &#39;013655&#39; 主要思路是获取这样一">
+  <meta name="description" content="一个小音乐               body{             background: url(images&#x2F;bg.jpg) center no-repeat ;             background-size: cover;             position: relative;             top: 0px;">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Rockie.胡言乱语">
-<meta property="og:url" content="http://yoursite.com/js%E7%BB%83%E4%B9%A0/%E5%9B%BE%E7%89%87%E6%97%B6%E9%92%9F.html">
+<meta property="og:url" content="http://yoursite.com/js%E7%BB%83%E4%B9%A0/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8.html">
 <meta property="og:site_name" content="Rockie.胡言乱语">
-<meta property="og:description" content="Document       .time{         width: 20px;     }        window.onload &#x3D; function (){      var imgs &#x3D; document.getElementsByClassName(&#39;time&#39;)           &#x2F;&#x2F; var str &#x3D; &#39;013655&#39; 主要思路是获取这样一">
+<meta property="og:description" content="一个小音乐               body{             background: url(images&#x2F;bg.jpg) center no-repeat ;             background-size: cover;             position: relative;             top: 0px;">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/js%E7%BB%83%E4%B9%A0/images/0@2x-8.png">
-<meta property="og:image" content="http://yoursite.com/js%E7%BB%83%E4%B9%A0/images/0@2x-8.png">
-<meta property="og:image" content="http://yoursite.com/js%E7%BB%83%E4%B9%A0/images/0@2x-8.png">
-<meta property="og:image" content="http://yoursite.com/js%E7%BB%83%E4%B9%A0/images/0@2x-8.png">
-<meta property="og:image" content="http://yoursite.com/js%E7%BB%83%E4%B9%A0/images/0@2x-8.png">
-<meta property="og:image" content="http://yoursite.com/js%E7%BB%83%E4%B9%A0/images/0@2x-8.png">
-<meta property="article:published_time" content="2020-03-28T10:56:47.413Z">
-<meta property="article:modified_time" content="2020-03-28T10:56:47.413Z">
+<meta property="og:image" content="http://yoursite.com/js%E7%BB%83%E4%B9%A0/images/pin.png">
+<meta property="og:image" content="http://yoursite.com/js%E7%BB%83%E4%B9%A0/images/disc.png">
+<meta property="og:image" content="http://yoursite.com/js%E7%BB%83%E4%B9%A0/imgSrc">
+<meta property="og:image" content="http://yoursite.com/js%E7%BB%83%E4%B9%A0/item.user.avatarUrl">
+<meta property="article:published_time" content="2020-04-13T02:18:32.802Z">
+<meta property="article:modified_time" content="2020-04-13T01:05:59.959Z">
 <meta property="article:author" content=" 三歪">
 <meta property="article:tag" content="html">
 <meta property="article:tag" content="css">
@@ -34,7 +32,7 @@
 <meta property="article:tag" content="Designer">
 <meta property="article:tag" content="ChocolateLover">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/js%E7%BB%83%E4%B9%A0/images/0@2x-8.png">
+<meta name="twitter:image" content="http://yoursite.com/js%E7%BB%83%E4%B9%A0/images/pin.png">
   
     <link rel="alternative" href="/atom.xml" title="Rockie.胡言乱语" type="application/atom+xml">
   
@@ -202,64 +200,251 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <!DOCTYPE html>
-<html lang="en">
+        <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>一个小音乐</title>
+
+    <style>
+        body{
+            background: url(images/bg.jpg) center no-repeat ;
+            background-size: cover;
+            position: relative;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+        }
+
+        #app{
+            height: 600px;
+            width: 800px;
+            background-color: lightsteelblue;
+            margin: 280px auto;
+            border-radius: 10px;
+            box-shadow: 0px 5px 10px gray;
+
+
+        }
+        a{
+            text-decoration: none;
+            color: gray;
+            font-size: 13px;
+        }
+        header{
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+            justify-content: space-between;
+            background-color: rgb(96, 94, 119);
+            padding: 0px 20px 0 20px;
+            border-radius: 10px 10px 0 0 ;
+        }
+        header div{
+            position: relative;
+        }
+        header div input{
+            border: 1px solid gainsboro;
+            border-radius: 10px;
+            width: 200px;
+        }
+        header div a{
+            position: absolute;
+            right: 15px;
+        }
+
+        /* 内容部分 */
+        #content{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        img{
+            width: 100px;
+        }
+        #left{
+            margin-top: 30px;
+            padding-top: 0;
+            width: 25%;
+            height: 420px;
+            padding-right: 20px;
+            border-right: 2px dashed gainsboro;
+            overflow: scroll;
+        }
+
+        #left ul, #right ul{
+            padding-left: 20px;
+            margin-top: 0;
+        }
+
+        #left li, #right li div{
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+
+        }
+
+        #middle{
+            width: 40%;
+            text-align: center;
+            position: relative;
+            margin-top: 20px;
+        }
+
+        #middle > img:first-of-type{
+            width: 200px;
+            position: absolute;
+            left: 100px;
+            top: 50px;
+            z-index: 13;
+            animation: rotateback 1s ;
+            animation-fill-mode: forwards;
+        }
+
+        #middle .disc{
+            width: 300px;
+            position: absolute;;
+            left: 20px;
+            top: 100px;
+            z-index: 10;
+        }
+
+        #middle .cover{
+            width: 220;
+            border-radius: 50%;
+            position: absolute;
+            left: 60px;
+            top: 120px;
+            z-index: 2 ;    
+        }
+
+        @keyframes rotate{
+            100%{ transform: rotate(360deg);/*360度结束*/}
+        }
+        @keyframes rotate90{
+	        0%{ transform: rotate(0deg);/*从0度开始*/}
+            100%{ transform: rotate(40deg);/*360度结束*/}
+        }
+        @keyframes rotateback{
+	        0%{ transform: rotate(40deg);/*从0度开始*/}
+            100%{ transform: rotate(0deg);/*360度结束*/}
+        }
+
+        .autoRotate {
+            animation-name: rotate;
+            animation-iteration-count: infinite;
+            animation-play-state: paused;
+            animation-timing-function: linear;
+            animation-duration: 5s;
+            }
+        
+            /* 是否正在播放 */
+        #middle.play >.disc, #middle.play >.cover{
+            animation-play-state: running;
+        }
+
+        #middle.play >img:first-of-type{
+            animation: rotate90 1s linear;
+            animation-fill-mode: forwards;
+        }
+
+
+        #right li div{
+            height: 50px;
+            align-items: unset;
+        }
+
+        #right{
+            margin-top: 30px;
+            width: 30%;
+            height: 420px;
+            padding-right: 10px;
+            border-left: 2px dashed gainsboro;
+            overflow: scroll;
+        }
+
+        #right li{
+            list-style: none;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-around;
+            margin-bottom: 30px;
+            margin-top: 10px;
+        }
+        #right img{
+            width:50px;
+            border-radius: 50%;
+        }
+ 
+        footer audio{
+            margin-top: 30px;
+            height: 48px;
+            width: 800px;
+            outline: none;
+            border-radius: 0 0px 10px 10px;
+            background: #f1f3f4;
+        }
+
+    </style>
 <meta name="generator" content="Hexo 4.2.0"></head>
-<style>
-    .time{
-        width: 20px;
-    }
-</style>
-<script>
-
-    window.onload = function (){
-
-    var imgs = document.getElementsByClassName('time')
-     
-    // var str = '013655' 主要思路是获取这样一个六位字符串 并替换图片路径
-    // time.getHours() ---> int 我们需要08，但会返回数字8，所以要写个函数将数字转化为两位字符串
-    function getTime (time){
-        if (time < 10){
-            return '0'+time
-        }
-        else{
-            return ''+ time 
-        }
-    }
-        
-    // set interval 每秒都改变图片src
-    setInterval(() => {
-        var now = new Date() //每秒获取一次系统时间 它有很多内置函数 
-        var timestr = getTime(now.getHours()) + getTime(now.getMinutes()) +getTime(now.getSeconds())
-        
-        console.log(timestr)
-
-        for( var i=0; i<imgs.length; i++){
-        imgs[i].src = 'images/'+timestr[i] +'@2x-8.png'
-    }
-
-    }, 1000);
-
-
-
-
-    }
-</script>
-
-
 <body>
-    <img class='time' src='images/0@2x-8.png'>
-    <img class='time' src='images/0@2x-8.png'>
-    :
-    <img class='time' src='images/0@2x-8.png'>
-    <img class='time' src='images/0@2x-8.png'>
-    :
-    <img class='time' src='images/0@2x-8.png'>
-    <img class='time' src='images/0@2x-8.png'>
+
+    <section id='app'>
+        <!-- 头部 -->
+        <header>
+            <h2>一个小音乐</h2>
+            <div>
+                <input v-model='keyword' @keyup.enter='getMusic' type="text" placeholder="输入什么">
+                <a @click='getMusic' href="#">搜</a>
+            </div>
+        </header>
+        
+        <!-- 中心部分 3块区域 -->
+        <section id='content'>
+            <div id='left'>
+                <ul>
+                    <li  v-for='(item,index) in songs' @click='play(index)'>
+                        <a href="#">🎵</a>
+                        <p></p>
+                        <a href="#">MV</a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            <div id='middle' :class='{play:isPlaying}'>
+                <img src="images/pin.png" alt="">
+                <img class='disc autoRotate'src="images/disc.png" alt="">
+                <img class='cover autoRotate'class='autoRotate' v-bind:src='imgSrc' alt="">
+            </div>
+
+            <div id='right'>
+                <ul>
+                    <li v-for = '(item,index) in comments' >
+                        <div>
+                            <img :src='item.user.avatarUrl'>
+                            <h4></h4>
+                        </div>
+                        <p>
+                        </p>
+                       
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <footer>
+            <audio @play='going' @pause='stop' v-bind:src="songUrl" controls='control' autoplay='autoplay' loop='loop'></audio>
+        </footer>
+
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src='music.js'></script>
 </body>
 </html>
       
@@ -319,7 +504,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/js%E7%BB%83%E4%B9%A0/%E5%9B%BE%E7%89%87%E6%97%B6%E9%92%9F.html" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/js%E7%BB%83%E4%B9%A0/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8.html" alt="微信分享二维码">
     </div>
 </div>
 

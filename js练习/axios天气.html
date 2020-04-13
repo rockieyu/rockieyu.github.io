@@ -11,21 +11,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Rockie.胡言乱语</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Document       .time{         width: 20px;     }        window.onload &#x3D; function (){      var imgs &#x3D; document.getElementsByClassName(&#39;time&#39;)           &#x2F;&#x2F; var str &#x3D; &#39;013655&#39; 主要思路是获取这样一">
+  <meta name="description" content="天气              #app{             margin: 100px auto;             height: 500px;             background-color: rgb(240, 251, 255);             padding: 20px;                      }">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Rockie.胡言乱语">
-<meta property="og:url" content="http://yoursite.com/js%E7%BB%83%E4%B9%A0/%E5%9B%BE%E7%89%87%E6%97%B6%E9%92%9F.html">
+<meta property="og:url" content="http://yoursite.com/js%E7%BB%83%E4%B9%A0/axios%E5%A4%A9%E6%B0%94.html">
 <meta property="og:site_name" content="Rockie.胡言乱语">
-<meta property="og:description" content="Document       .time{         width: 20px;     }        window.onload &#x3D; function (){      var imgs &#x3D; document.getElementsByClassName(&#39;time&#39;)           &#x2F;&#x2F; var str &#x3D; &#39;013655&#39; 主要思路是获取这样一">
+<meta property="og:description" content="天气              #app{             margin: 100px auto;             height: 500px;             background-color: rgb(240, 251, 255);             padding: 20px;                      }">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/js%E7%BB%83%E4%B9%A0/images/0@2x-8.png">
-<meta property="og:image" content="http://yoursite.com/js%E7%BB%83%E4%B9%A0/images/0@2x-8.png">
-<meta property="og:image" content="http://yoursite.com/js%E7%BB%83%E4%B9%A0/images/0@2x-8.png">
-<meta property="og:image" content="http://yoursite.com/js%E7%BB%83%E4%B9%A0/images/0@2x-8.png">
-<meta property="og:image" content="http://yoursite.com/js%E7%BB%83%E4%B9%A0/images/0@2x-8.png">
-<meta property="og:image" content="http://yoursite.com/js%E7%BB%83%E4%B9%A0/images/0@2x-8.png">
-<meta property="article:published_time" content="2020-03-28T10:56:47.413Z">
-<meta property="article:modified_time" content="2020-03-28T10:56:47.413Z">
+<meta property="article:published_time" content="2020-04-13T01:05:55.228Z">
+<meta property="article:modified_time" content="2020-04-13T01:05:54.728Z">
 <meta property="article:author" content=" 三歪">
 <meta property="article:tag" content="html">
 <meta property="article:tag" content="css">
@@ -34,7 +28,6 @@
 <meta property="article:tag" content="Designer">
 <meta property="article:tag" content="ChocolateLover">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/js%E7%BB%83%E4%B9%A0/images/0@2x-8.png">
   
     <link rel="alternative" href="/atom.xml" title="Rockie.胡言乱语" type="application/atom+xml">
   
@@ -202,64 +195,121 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <!DOCTYPE html>
-<html lang="en">
+        <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>天气</title>
+    <style>
+        #app{
+            margin: 100px auto;
+            height: 500px;
+            background-color: rgb(240, 251, 255);
+            padding: 20px;
+            
+        }
+        h2, #search, #clickSearch, #detail{
+            text-align: center;
+        }
+        
+        #search input:nth-child(1){
+            width: 300px;
+        }
+
+        #clickSearch{
+            text-decoration: none;
+            font-size: 10px;
+            color: lightslategray;
+            padding: 10px 10px;
+        }
+        #clickSearch a{
+            padding-left: 10px;
+            text-decoration: none;
+        }
+        
+        #detail{
+            width: 600px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding-top: 30px;
+            
+        }
+        #daily{
+            width: 200px;
+        }
+        
+
+        
+    </style>
 <meta name="generator" content="Hexo 4.2.0"></head>
-<style>
-    .time{
-        width: 20px;
-    }
-</style>
-<script>
-
-    window.onload = function (){
-
-    var imgs = document.getElementsByClassName('time')
-     
-    // var str = '013655' 主要思路是获取这样一个六位字符串 并替换图片路径
-    // time.getHours() ---> int 我们需要08，但会返回数字8，所以要写个函数将数字转化为两位字符串
-    function getTime (time){
-        if (time < 10){
-            return '0'+time
-        }
-        else{
-            return ''+ time 
-        }
-    }
-        
-    // set interval 每秒都改变图片src
-    setInterval(() => {
-        var now = new Date() //每秒获取一次系统时间 它有很多内置函数 
-        var timestr = getTime(now.getHours()) + getTime(now.getMinutes()) +getTime(now.getSeconds())
-        
-        console.log(timestr)
-
-        for( var i=0; i<imgs.length; i++){
-        imgs[i].src = 'images/'+timestr[i] +'@2x-8.png'
-    }
-
-    }, 1000);
-
-
-
-
-    }
-</script>
-
-
 <body>
-    <img class='time' src='images/0@2x-8.png'>
-    <img class='time' src='images/0@2x-8.png'>
-    :
-    <img class='time' src='images/0@2x-8.png'>
-    <img class='time' src='images/0@2x-8.png'>
-    :
-    <img class='time' src='images/0@2x-8.png'>
-    <img class='time' src='images/0@2x-8.png'>
+    <section id='app'>
+        <h2>一个小预报</h2>
+        <!-- 查询框 -->
+        <div id='search'>
+            <input v-model='city' @keyup.enter='getWeather(city)' type="text" placeholder="输个城市呗">
+            <input @click = 'getWeather(city)' type="button" value='搜索一下'>
+        </div>
+        <div id='clickSearch'>
+            <a v-for='item in hotspots' @click = 'getWeather(item)' href="#"></a>
+        </div>
+
+        <section id='detail' >
+            <div id='daily' v-for='(item,index) in temperature'>
+                <h3></h3>
+                <h4> ~ </h4>
+                <p></p>
+            </div>
+        </section>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    
+    <script>
+        var app = new Vue({
+            el:'#app',
+            data:{
+                city:'',
+                temperature:[],
+                hotspots:['北京','上海','广州','武汉']
+            },
+
+            /*
+            回车查询 
+            1. 按下回车（@keyup.enter)
+            2. 获取api数据 （axios接口，v-model）
+            3. 渲染数据（v-for，axios中that）
+            */
+
+            /*
+            接口信息
+            请求地址：http://wthrcdn.etouch.cn/weather_mini
+            请求方法：get
+            请求参数：city
+            响应内容：天气信息
+            */
+
+            methods:{
+                getWeather: function(city){
+                    var that = this;
+                    axios.get('http://wthrcdn.etouch.cn/weather_mini?city='+ city).then
+                    (function(response){
+                        console.log(response.data.data.forecast);
+                        that.temperature = response.data.data.forecast
+                    },function(err){
+                        console.log(err)
+                    })
+                },
+
+            }
+
+        })
+
+    </script>
+    
+    
 </body>
 </html>
       
@@ -319,7 +369,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/js%E7%BB%83%E4%B9%A0/%E5%9B%BE%E7%89%87%E6%97%B6%E9%92%9F.html" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/js%E7%BB%83%E4%B9%A0/axios%E5%A4%A9%E6%B0%94.html" alt="微信分享二维码">
     </div>
 </div>
 

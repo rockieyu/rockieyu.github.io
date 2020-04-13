@@ -11,21 +11,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Rockie.胡言乱语</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Document       .time{         width: 20px;     }        window.onload &#x3D; function (){      var imgs &#x3D; document.getElementsByClassName(&#39;time&#39;)           &#x2F;&#x2F; var str &#x3D; &#39;013655&#39; 主要思路是获取这样一">
+  <meta name="description" content="Document               #note{             width:500px;             height: 600px;             margin: 200px auto;         }         #content{             border:1px solid gainsboro;">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Rockie.胡言乱语">
-<meta property="og:url" content="http://yoursite.com/js%E7%BB%83%E4%B9%A0/%E5%9B%BE%E7%89%87%E6%97%B6%E9%92%9F.html">
+<meta property="og:url" content="http://yoursite.com/js%E7%BB%83%E4%B9%A0/%E4%B8%80%E4%B8%AA%E5%B0%8F%E6%9C%AC%E5%AD%90.html">
 <meta property="og:site_name" content="Rockie.胡言乱语">
-<meta property="og:description" content="Document       .time{         width: 20px;     }        window.onload &#x3D; function (){      var imgs &#x3D; document.getElementsByClassName(&#39;time&#39;)           &#x2F;&#x2F; var str &#x3D; &#39;013655&#39; 主要思路是获取这样一">
+<meta property="og:description" content="Document               #note{             width:500px;             height: 600px;             margin: 200px auto;         }         #content{             border:1px solid gainsboro;">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/js%E7%BB%83%E4%B9%A0/images/0@2x-8.png">
-<meta property="og:image" content="http://yoursite.com/js%E7%BB%83%E4%B9%A0/images/0@2x-8.png">
-<meta property="og:image" content="http://yoursite.com/js%E7%BB%83%E4%B9%A0/images/0@2x-8.png">
-<meta property="og:image" content="http://yoursite.com/js%E7%BB%83%E4%B9%A0/images/0@2x-8.png">
-<meta property="og:image" content="http://yoursite.com/js%E7%BB%83%E4%B9%A0/images/0@2x-8.png">
-<meta property="og:image" content="http://yoursite.com/js%E7%BB%83%E4%B9%A0/images/0@2x-8.png">
-<meta property="article:published_time" content="2020-03-28T10:56:47.413Z">
-<meta property="article:modified_time" content="2020-03-28T10:56:47.413Z">
+<meta property="article:published_time" content="2020-04-13T01:05:47.182Z">
+<meta property="article:modified_time" content="2020-04-13T01:05:34.565Z">
 <meta property="article:author" content=" 三歪">
 <meta property="article:tag" content="html">
 <meta property="article:tag" content="css">
@@ -34,7 +28,6 @@
 <meta property="article:tag" content="Designer">
 <meta property="article:tag" content="ChocolateLover">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/js%E7%BB%83%E4%B9%A0/images/0@2x-8.png">
   
     <link rel="alternative" href="/atom.xml" title="Rockie.胡言乱语" type="application/atom+xml">
   
@@ -202,64 +195,141 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <!DOCTYPE html>
-<html lang="en">
+        <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        #note{
+            width:500px;
+            height: 600px;
+            margin: 200px auto;
+        }
+        #content{
+            border:1px solid gainsboro;
+            box-shadow: 0px 10px 10px rgb(197, 191, 191);
+            padding: 15px;   
+        }
+        #content li, input{
+            height:40px;
+            border-bottom: 1px solid gainsboro;
+
+        }
+        #content input{
+            background: none;
+            outline: none;
+            border: none;
+        }
+    
+        #content ul{
+           padding-left: 0;
+        }
+        #content li{
+            display:flex;
+            list-style: none;
+            flex-direction: row;
+            align-items: baseline;
+            justify-content: space-between;
+            padding-bottom: 10px;
+        }
+
+        #content li:hover >a{
+           opacity: 100;;
+        }
+
+        #content a{
+            text-decoration: none;
+            color: grey;
+            font-size: 13px; 
+            cursor: pointer;
+        }
+        ul a{
+            opacity: 0;
+        }
+
+        #footer{
+            display: flex;
+            font-size: 12px;
+            justify-content: space-between;
+        }
+    </style>
 <meta name="generator" content="Hexo 4.2.0"></head>
-<style>
-    .time{
-        width: 20px;
-    }
-</style>
-<script>
-
-    window.onload = function (){
-
-    var imgs = document.getElementsByClassName('time')
-     
-    // var str = '013655' 主要思路是获取这样一个六位字符串 并替换图片路径
-    // time.getHours() ---> int 我们需要08，但会返回数字8，所以要写个函数将数字转化为两位字符串
-    function getTime (time){
-        if (time < 10){
-            return '0'+time
-        }
-        else{
-            return ''+ time 
-        }
-    }
-        
-    // set interval 每秒都改变图片src
-    setInterval(() => {
-        var now = new Date() //每秒获取一次系统时间 它有很多内置函数 
-        var timestr = getTime(now.getHours()) + getTime(now.getMinutes()) +getTime(now.getSeconds())
-        
-        console.log(timestr)
-
-        for( var i=0; i<imgs.length; i++){
-        imgs[i].src = 'images/'+timestr[i] +'@2x-8.png'
-    }
-
-    }, 1000);
-
-
-
-
-    }
-</script>
-
 
 <body>
-    <img class='time' src='images/0@2x-8.png'>
-    <img class='time' src='images/0@2x-8.png'>
-    :
-    <img class='time' src='images/0@2x-8.png'>
-    <img class='time' src='images/0@2x-8.png'>
-    :
-    <img class='time' src='images/0@2x-8.png'>
-    <img class='time' src='images/0@2x-8.png'>
+    <div id='note'>
+        <h1>一个小本子</h1>
+        <section id='content'>
+            <!-- 输入部分 -->
+            <input v-model='whatToDo' @keyup.enter='addList' type='text' placeholder="type something...">
+            <!-- 列表部分 -->
+            <ul>
+                <li v-show='active' v-for = '(item,index) in toDo'>
+                    <p>NaN。</p>
+                    <p></p>
+                    <a @click='removethis(index)' href="#"> 删掉 </a> 
+                </li>
+            </ul>
+            <div id='footer' v-show='active'>
+                <!-- 统计/全清，左下角统计 右下角全清-->
+                <span> thing to be done</span>
+                <a  @click='deleteAll'>clear</a>
+            </div>
+        </section>
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        // 记事本功能
+        
+        
+        
+        
+        // 5. 隐藏，清空时隐藏元素
+        
+        var app = new Vue({
+            el:'#note',
+            data:{
+                toDo:[
+                    {thing:'无所事事的一天'},
+                    {thing:'又无所事事的一天'},
+                ],
+                whatToDo:'',
+                active : true,
+            },
+
+            methods:{
+                // 1. 新增， text内容的增加 
+                addList:function(){
+                    if (this.active) {          
+                        this.toDo.push({thing:this.whatToDo});
+                        this.whatToDo = ''
+                    }
+                    else{
+                        this.active = true;
+                        this.toDo = [];
+                        this.toDo.push({thing:this.whatToDo});
+                        this.whatToDo = ''
+                    
+                    }
+                },
+                // 2. 删除特定元素， 移入可以删除元素,传入index！
+                removethis:function(index){
+                    console.log(index),
+                    this.toDo.splice(index,1)
+                },
+
+                // 4. 清空，一键清空
+                deleteAll:function(){     
+                    this.active = false
+                },
+        
+            }
+        })
+    </script>
 </body>
 </html>
       
@@ -319,7 +389,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/js%E7%BB%83%E4%B9%A0/%E5%9B%BE%E7%89%87%E6%97%B6%E9%92%9F.html" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/js%E7%BB%83%E4%B9%A0/%E4%B8%80%E4%B8%AA%E5%B0%8F%E6%9C%AC%E5%AD%90.html" alt="微信分享二维码">
     </div>
 </div>
 
